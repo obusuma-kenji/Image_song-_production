@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>イメージソング制作提案書</title>
+    <title>企業・クリニック向け イメージソング制作サービス</title>
     <style>
         @page {
             size: A4;
@@ -44,28 +44,29 @@
         /* ヘッダー */
         .header {
             text-align: center;
-            background: #4a90e2;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 25mm 10mm;
             margin: -20mm -20mm 15mm -20mm;
         }
         
         .header h1 {
-            font-size: 24pt;
-            margin: 0 0 10mm 0;
+            font-size: 22pt;
+            margin: 0 0 8mm 0;
             font-weight: bold;
         }
         
         .header .subtitle {
             font-size: 14pt;
             margin-bottom: 8mm;
+            opacity: 0.9;
         }
         
-        .header .client {
-            font-size: 16pt;
+        .header .tagline {
+            font-size: 12pt;
             background: rgba(255,255,255,0.2);
-            padding: 5mm 15mm;
-            border-radius: 20mm;
+            padding: 4mm 12mm;
+            border-radius: 15mm;
             display: inline-block;
         }
         
@@ -75,63 +76,145 @@
         }
         
         .section-title {
-            color: #357abd;
+            color: #667eea;
             font-size: 14pt;
             font-weight: bold;
             margin-bottom: 8mm;
-            border-bottom: 2pt solid #4a90e2;
+            border-bottom: 2pt solid #667eea;
             padding-bottom: 2mm;
         }
         
         /* 背景ボックス */
-        .background-box {
-            background: #e3f2fd;
-            border: 1pt solid #4a90e2;
-            padding: 8mm;
-            margin: 5mm 0;
-            border-radius: 3mm;
-        }
-        
-        .background-box h3 {
-            color: #357abd;
-            margin: 0 0 5mm 0;
-            font-size: 12pt;
-        }
-        
-        .background-box p {
-            margin: 0;
-            font-size: 10pt;
-            line-height: 1.6;
-        }
-        
-        /* 効果グリッド */
-        .benefits-container {
-            display: block;
-        }
-        
-        .benefit-row {
-            display: flex;
-            margin-bottom: 8mm;
-            gap: 5mm;
-        }
-        
-        .benefit-item {
-            flex: 1;
-            background: #f8f9fa;
-            border: 1pt solid #dee2e6;
-            padding: 6mm;
-            border-radius: 3mm;
+        .intro-box {
+            background: linear-gradient(135deg, #e8f0fe 0%, #f3e5f5 100%);
+            border: 1pt solid #667eea;
+            padding: 10mm;
+            margin: 8mm 0;
+            border-radius: 5mm;
             text-align: center;
         }
         
-        .benefit-icon {
+        .intro-box h3 {
+            color: #667eea;
+            margin: 0 0 6mm 0;
+            font-size: 13pt;
+            font-weight: bold;
+        }
+        
+        .intro-box p {
+            margin: 0;
+            font-size: 11pt;
+            line-height: 1.7;
+        }
+        
+        /* 問題・解決ボックス */
+        .problem-solution {
+            display: flex;
+            gap: 8mm;
+            margin: 10mm 0;
+        }
+        
+        .problem-box, .solution-box {
+            flex: 1;
+            padding: 8mm;
+            border-radius: 5mm;
+        }
+        
+        .problem-box {
+            background: #fff5f5;
+            border-left: 4pt solid #ef4444;
+        }
+        
+        .solution-box {
+            background: #f0fdf4;
+            border-left: 4pt solid #22c55e;
+        }
+        
+        .problem-box h4, .solution-box h4 {
+            margin: 0 0 5mm 0;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+        
+        .problem-box h4 {
+            color: #ef4444;
+        }
+        
+        .solution-box h4 {
+            color: #22c55e;
+        }
+        
+        .problem-box ul, .solution-box ul {
+            margin: 0;
+            padding-left: 12mm;
+            font-size: 9pt;
+            line-height: 1.6;
+        }
+        
+        /* 業界別セクション */
+        .industry-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6mm;
+            margin: 8mm 0;
+        }
+        
+        .industry-card {
+            flex: 1;
+            min-width: 35mm;
+            background: #f8fafc;
+            border: 1pt solid #e2e8f0;
+            padding: 6mm;
+            border-radius: 4mm;
+            text-align: center;
+        }
+        
+        .industry-icon {
             font-size: 16pt;
             margin-bottom: 3mm;
             display: block;
         }
         
+        .industry-title {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 9pt;
+            margin-bottom: 3mm;
+        }
+        
+        .industry-examples {
+            font-size: 8pt;
+            color: #666;
+            margin: 0;
+            line-height: 1.4;
+        }
+        
+        /* 効果グリッド */
+        .benefits-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5mm;
+            margin: 8mm 0;
+        }
+        
+        .benefit-item {
+            flex: 1;
+            min-width: 50mm;
+            background: #f8fafc;
+            border: 1pt solid #e2e8f0;
+            padding: 6mm;
+            border-radius: 4mm;
+            text-align: center;
+        }
+        
+        .benefit-icon {
+            font-size: 14pt;
+            margin-bottom: 3mm;
+            display: block;
+        }
+        
         .benefit-title {
-            color: #357abd;
+            color: #667eea;
             font-weight: bold;
             font-size: 9pt;
             margin-bottom: 3mm;
@@ -143,35 +226,35 @@
             margin: 0;
         }
         
-        /* 2カラムレイアウト */
-        .two-columns {
+        /* 特徴リスト */
+        .features-grid {
             display: flex;
             gap: 8mm;
             margin: 8mm 0;
         }
         
-        .column {
+        .feature-column {
             flex: 1;
-            background: #f8f9fa;
+            background: #f8fafc;
             padding: 6mm;
-            border-radius: 3mm;
-            border-left: 3pt solid #4a90e2;
+            border-radius: 4mm;
+            border-left: 3pt solid #667eea;
         }
         
-        .column h4 {
-            color: #357abd;
+        .feature-column h4 {
+            color: #667eea;
             margin: 0 0 5mm 0;
             font-size: 11pt;
         }
         
-        .column ul {
+        .feature-column ul {
             margin: 0;
             padding-left: 12mm;
             font-size: 9pt;
             line-height: 1.5;
         }
         
-        .column li {
+        .feature-column li {
             margin-bottom: 2mm;
         }
         
@@ -190,7 +273,7 @@
         .process-number {
             width: 8mm;
             height: 8mm;
-            background: #4a90e2;
+            background: #667eea;
             color: white;
             border-radius: 50%;
             display: flex;
@@ -203,14 +286,14 @@
         
         .process-content {
             flex: 1;
-            background: #f8f9fa;
+            background: #f8fafc;
             padding: 5mm;
             border-radius: 3mm;
-            border-left: 2pt solid #4a90e2;
+            border-left: 2pt solid #667eea;
         }
         
         .process-title {
-            color: #357abd;
+            color: #667eea;
             font-weight: bold;
             margin-bottom: 2mm;
             font-size: 10pt;
@@ -223,92 +306,97 @@
         }
         
         /* 価格表 */
-        .pricing-box {
-            background: #667eea;
-            color: white;
-            padding: 10mm;
-            text-align: center;
+        .pricing-container {
+            display: flex;
+            gap: 6mm;
+            margin: 10mm 0;
+        }
+        
+        .pricing-plan {
+            flex: 1;
+            background: #f8fafc;
+            border: 2pt solid #e2e8f0;
             border-radius: 5mm;
-            margin: 8mm 0;
+            padding: 8mm;
+            text-align: center;
+            position: relative;
         }
         
-        .pricing-title {
-            font-size: 16pt;
+        .pricing-plan.featured {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .pricing-plan.featured .plan-title {
+            color: white;
+        }
+        
+        .plan-title {
+            color: #667eea;
+            font-size: 12pt;
+            font-weight: bold;
             margin-bottom: 5mm;
+        }
+        
+        .plan-price {
+            font-size: 18pt;
             font-weight: bold;
+            margin: 3mm 0;
         }
         
-        .pricing-amount {
-            font-size: 24pt;
-            font-weight: bold;
-            margin: 5mm 0;
-        }
-        
-        .pricing-subtitle {
-            font-size: 10pt;
-            margin-bottom: 8mm;
-        }
-        
-        .pricing-features {
+        .plan-features {
             text-align: left;
-            margin: 0 auto;
-            max-width: 80mm;
+            margin: 5mm 0;
             padding: 0;
             list-style: none;
         }
         
-        .pricing-features li {
-            margin: 3mm 0;
-            padding-left: 8mm;
+        .plan-features li {
+            margin: 2mm 0;
+            padding-left: 6mm;
             position: relative;
-            font-size: 9pt;
+            font-size: 8pt;
         }
         
-        .pricing-features li::before {
+        .plan-features li::before {
             content: "✓";
             position: absolute;
             left: 0;
+            color: #22c55e;
+            font-weight: bold;
+        }
+        
+        .pricing-plan.featured .plan-features li::before {
             color: #4ade80;
-            font-weight: bold;
         }
         
-        .pricing-conditions {
-            margin-top: 8mm;
-            font-size: 9pt;
-            text-align: center;
-        }
-        
-        /* オプション */
-        .options-container {
-            display: flex;
-            gap: 5mm;
+        /* 事例ボックス */
+        .case-study {
+            background: #fef7ff;
+            border: 1pt solid #d8b4fe;
+            padding: 8mm;
             margin: 8mm 0;
+            border-radius: 5mm;
         }
         
-        .option-item {
-            flex: 1;
-            background: #f8f9fa;
-            border: 1pt solid #dee2e6;
-            padding: 6mm;
-            text-align: center;
-            border-radius: 3mm;
+        .case-study h4 {
+            color: #7c3aed;
+            margin: 0 0 5mm 0;
+            font-size: 11pt;
         }
         
-        .option-icon {
-            font-size: 14pt;
-            margin-bottom: 3mm;
+        .case-quote {
+            font-style: italic;
+            font-size: 10pt;
+            line-height: 1.6;
+            margin: 5mm 0;
         }
         
-        .option-title {
-            color: #357abd;
-            font-weight: bold;
-            font-size: 9pt;
-            margin-bottom: 2mm;
-        }
-        
-        .option-price {
-            color: #666;
+        .case-attribution {
+            text-align: right;
             font-size: 8pt;
+            color: #666;
             margin: 0;
         }
         
@@ -316,7 +404,7 @@
         .cta-box {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
-            padding: 10mm;
+            padding: 12mm;
             text-align: center;
             border-radius: 5mm;
             margin: 10mm 0;
@@ -324,23 +412,28 @@
         
         .cta-title {
             font-size: 16pt;
-            margin-bottom: 5mm;
+            margin-bottom: 6mm;
             font-weight: bold;
         }
         
         .cta-text {
             font-size: 11pt;
-            margin: 0;
+            margin-bottom: 8mm;
             line-height: 1.6;
+        }
+        
+        .cta-contact {
+            font-size: 12pt;
+            font-weight: bold;
         }
         
         /* 連絡先 */
         .contact-box {
-            background: #2d3748;
+            background: #1e293b;
             color: white;
-            padding: 8mm;
+            padding: 10mm;
             text-align: center;
-            border-radius: 3mm;
+            border-radius: 5mm;
         }
         
         .contact-title {
@@ -361,8 +454,8 @@
         }
         
         .contact-icon {
-            font-size: 14pt;
-            color: #4a90e2;
+            font-size: 12pt;
+            color: #667eea;
             margin-bottom: 3mm;
         }
         
@@ -382,37 +475,26 @@
             text-align: center;
             margin-top: 15mm;
             padding-top: 8mm;
-            border-top: 1pt solid #4a90e2;
+            border-top: 1pt solid #667eea;
             color: #666;
             font-size: 8pt;
         }
         
         /* ハイライト */
-        .fractal-highlight {
-            background: #fff3e0;
-            padding: 1mm 2mm;
+        .highlight {
+            background: #fef3c7;
+            padding: 1mm 3mm;
             border-radius: 2mm;
-            color: #357abd;
+            color: #92400e;
             font-weight: bold;
         }
         
-        .testimonial {
-            background: #f8f9fa;
-            border-left: 3pt solid #4a90e2;
-            padding: 6mm;
-            margin: 8mm 0;
-            font-style: italic;
-            text-align: center;
-            border-radius: 0 3mm 3mm 0;
-            font-size: 10pt;
-        }
-        
-        /* 印刷ボタン（画面表示のみ） */
+        /* 印刷ボタン */
         .print-btn {
             position: fixed;
             top: 10mm;
             right: 10mm;
-            background: #4a90e2;
+            background: #667eea;
             color: white;
             border: none;
             padding: 8mm 15mm;
@@ -420,7 +502,7 @@
             cursor: pointer;
             font-size: 10pt;
             font-weight: bold;
-            box-shadow: 0 2mm 8mm rgba(74,144,226,0.3);
+            box-shadow: 0 2mm 8mm rgba(102,126,234,0.3);
             z-index: 1000;
         }
         
@@ -431,7 +513,7 @@
         }
         
         .print-btn:hover {
-            background: #357abd;
+            background: #5b21b6;
         }
     </style>
 </head>
@@ -441,92 +523,140 @@
     <div class="container">
         <!-- ページ1 -->
         <div class="header">
-            <h1>イメージソング制作提案書</h1>
-            <div class="subtitle">音楽で紡ぐ、心のつながり</div>
-            <div class="client">ファミリー歯科医院様</div>
+            <h1>🎵 企業イメージソング制作サービス</h1>
+            <div class="subtitle">音楽で創る、組織の絆とブランド価値</div>
+            <div class="tagline">AI技術×心理学で生み出す、オリジナル楽曲</div>
         </div>
         
-        <div class="background-box no-break">
-            <h3>🎼 ご提案の背景</h3>
+        <div class="intro-box no-break">
+            <h3>🎼 音楽が変える、企業の未来</h3>
             <p>
-                貴院の「<strong>忠恕</strong>」の理念と、副院長様の<span class="fractal-highlight">フラクタル心理学</span>への造詣を拝見し、音楽を通じて貴院の価値観を表現し、<strong>スタッフの皆様の結束力向上</strong>と<strong>患者様との心のつながり</strong>を深める楽曲制作をご提案いたします。
+                <span class="highlight">スタッフの定着率向上</span>、<span class="highlight">顧客との絆強化</span>、<span class="highlight">ブランド差別化</span>を同時に実現する、革新的な企業イメージソング制作サービスです。最新AI技術と心理学理論を組み合わせ、あなたの組織にぴったりの楽曲をお創りします。
             </p>
+        </div>
+
+        <div class="problem-solution no-break">
+            <div class="problem-box">
+                <h4>😟 こんな課題はありませんか？</h4>
+                <ul>
+                    <li>スタッフの離職率が高い</li>
+                    <li>チームワークが不足している</li>
+                    <li>他社との差別化が難しい</li>
+                    <li>企業文化が浸透しない</li>
+                    <li>顧客との感情的つながりが薄い</li>
+                    <li>ブランドの記憶に残らない</li>
+                </ul>
+            </div>
+            <div class="solution-box">
+                <h4>🎵 音楽の力で解決！</h4>
+                <ul>
+                    <li>共通の楽曲で職場への愛着向上</li>
+                    <li>歌うことでチーム結束力強化</li>
+                    <li>独自の楽曲でブランド差別化</li>
+                    <li>音楽で理念やビジョンを浸透</li>
+                    <li>感情に訴える音楽で顧客との絆深化</li>
+                    <li>記憶に残るメロディーでブランド想起</li>
+                </ul>
+            </div>
         </div>
 
         <!-- ページ2 -->
         <div class="page-break"></div>
         
         <div class="section">
-            <h2 class="section-title">🎯 期待される効果</h2>
+            <h2 class="section-title">🏢 業界別活用例</h2>
+            <div class="industry-grid">
+                <div class="industry-card">
+                    <span class="industry-icon">🏥</span>
+                    <div class="industry-title">医療・歯科</div>
+                    <p class="industry-examples">患者様の安心感向上<br>スタッフの使命感醸成</p>
+                </div>
+                <div class="industry-card">
+                    <span class="industry-icon">🏪</span>
+                    <div class="industry-title">小売・サービス</div>
+                    <p class="industry-examples">店舗の雰囲気作り<br>スタッフのモチベーション向上</p>
+                </div>
+                <div class="industry-card">
+                    <span class="industry-icon">🏭</span>
+                    <div class="industry-title">製造業</div>
+                    <p class="industry-examples">安全意識の向上<br>品質へのこだわり表現</p>
+                </div>
+                <div class="industry-card">
+                    <span class="industry-icon">🎓</span>
+                    <div class="industry-title">教育機関</div>
+                    <p class="industry-examples">学校への帰属意識<br>教育理念の浸透</p>
+                </div>
+                <div class="industry-card">
+                    <span class="industry-icon">💼</span>
+                    <div class="industry-title">士業・コンサル</div>
+                    <p class="industry-examples">信頼性のアピール<br>専門性の表現</p>
+                </div>
+                <div class="industry-card">
+                    <span class="industry-icon">🍽️</span>
+                    <div class="industry-title">飲食業</div>
+                    <p class="industry-examples">おもてなしの心<br>食への情熱表現</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">✨ 期待される効果</h2>
             <div class="benefits-container">
-                <div class="benefit-row">
-                    <div class="benefit-item">
-                        <span class="benefit-icon">👥</span>
-                        <div class="benefit-title">スタッフ定着率の向上</div>
-                        <p class="benefit-text">共通の楽曲を通じて職場への愛着と誇りを育み、長期就業をサポート</p>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="benefit-icon">💝</span>
-                        <div class="benefit-title">患者様との信頼関係構築</div>
-                        <p class="benefit-text">温かい音楽が診療空間を和ませ、安心感と親しみやすさを演出</p>
-                    </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">👥</span>
+                    <div class="benefit-title">スタッフ定着率向上</div>
+                    <p class="benefit-text">共通の楽曲で職場への愛着と誇りを育成</p>
                 </div>
-                
-                <div class="benefit-row">
-                    <div class="benefit-item">
-                        <span class="benefit-icon">🌟</span>
-                        <div class="benefit-title">ブランドアイデンティティの確立</div>
-                        <p class="benefit-text">他院との差別化を図り、地域に愛される歯科医院としての地位を確立</p>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="benefit-icon">🎵</span>
-                        <div class="benefit-title">日常業務の質向上</div>
-                        <p class="benefit-text">毎朝のミーティングや清掃時に歌うことで、チームワークと士気を向上</p>
-                    </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">💝</span>
+                    <div class="benefit-title">顧客満足度向上</div>
+                    <p class="benefit-text">音楽による感情的なつながりの構築</p>
                 </div>
-                
-                <div class="benefit-row">
-                    <div class="benefit-item">
-                        <span class="benefit-icon">📈</span>
-                        <div class="benefit-title">口コミ・紹介の促進</div>
-                        <p class="benefit-text">印象的な楽曲が患者様の記憶に残り、自然な口コミ効果を生み出す</p>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="benefit-icon">🔄</span>
-                        <div class="benefit-title">フラクタル効果の実現</div>
-                        <p class="benefit-text"><span class="fractal-highlight">小さな変化が大きな変化を生む</span>音楽の力で院内全体の雰囲気を向上</p>
-                    </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">🌟</span>
+                    <div class="benefit-title">ブランド価値向上</div>
+                    <p class="benefit-text">独自性のある企業イメージの確立</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">🎵</span>
+                    <div class="benefit-title">チームワーク強化</div>
+                    <p class="benefit-text">共に歌うことで結束力を向上</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">📈</span>
+                    <div class="benefit-title">口コミ効果</div>
+                    <p class="benefit-text">印象的な楽曲が自然な話題を創出</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">🔄</span>
+                    <div class="benefit-title">継続的な効果</div>
+                    <p class="benefit-text">一度制作すれば長期間活用可能</p>
                 </div>
             </div>
         </div>
 
         <div class="section no-break">
-            <h2 class="section-title">🎤 楽曲コンセプト</h2>
-            <div class="testimonial">
-                「<span class="fractal-highlight">一つの笑顔が広がって、無限の可能性を信じて</span>」<br>
-                - 貴院の理念とフラクタル心理学を織り込んだ、温かく希望に満ちた楽曲
-            </div>
-            
-            <div class="two-columns">
-                <div class="column">
-                    <h4>🎼 音楽的特徴</h4>
+            <h2 class="section-title">🎤 サービスの特徴</h2>
+            <div class="features-grid">
+                <div class="feature-column">
+                    <h4>🤖 最新AI技術</h4>
                     <ul>
-                        <li><strong>女性ボーカル</strong>による温かく親しみやすい歌声</li>
-                        <li><strong>BPM 80-90</strong>のゆったりテンポで歌いやすさ重視</li>
-                        <li><strong>アコースティック編成</strong>で上品な仕上がり</li>
-                        <li><strong>3分程度</strong>で日常的に親しめる構成</li>
-                        <li><strong>最新AI技術</strong>による高品質制作</li>
+                        <li><strong>SunoAI v4.5</strong>による高品質制作</li>
+                        <li>自然な日本語歌詞対応</li>
+                        <li>多様な音楽ジャンルに対応</li>
+                        <li>リアルタイム修正機能</li>
+                        <li>プロレベルの音質</li>
                     </ul>
                 </div>
                 
-                <div class="column">
-                    <h4>💎 歌詞の特徴</h4>
+                <div class="feature-column">
+                    <h4>🧠 心理学アプローチ</h4>
                     <ul>
-                        <li>貴院の核となる<strong>「忠恕」の精神</strong>を自然に表現</li>
-                        <li><span class="fractal-highlight">フラクタル心理学の概念</span>を詩的に織り込み</li>
-                        <li><strong>チーム医療</strong>と<strong>予防重視</strong>の価値観を反映</li>
-                        <li><strong>スタッフの働きがい</strong>と<strong>患者様への想い</strong>をバランス良く表現</li>
-                        <li><strong>地域密着</strong>への想いと<strong>未来への希望</strong>を込めた内容</li>
+                        <li>組織心理学に基づく歌詞設計</li>
+                        <li>モチベーション理論の活用</li>
+                        <li>記憶に残るメロディー構成</li>
+                        <li>感情に訴える音楽要素</li>
+                        <li>集団効力感の向上</li>
                     </ul>
                 </div>
             </div>
@@ -542,7 +672,7 @@
                     <div class="process-number">1</div>
                     <div class="process-content">
                         <div class="process-title">詳細ヒアリング（1週間）</div>
-                        <p class="process-text">貴院の理念、スタッフの皆様のご要望、使用シーンなどを詳しくお伺いします</p>
+                        <p class="process-text">企業理念、組織文化、ターゲット、活用シーンなどを詳しくお伺いします</p>
                     </div>
                 </div>
                 
@@ -550,15 +680,15 @@
                     <div class="process-number">2</div>
                     <div class="process-content">
                         <div class="process-title">楽曲コンセプト設計（1週間）</div>
-                        <p class="process-text">フラクタル心理学の要素を含む歌詞案と音楽コンセプトを策定します</p>
+                        <p class="process-text">心理学理論を活用した歌詞案と音楽コンセプトを策定します</p>
                     </div>
                 </div>
                 
                 <div class="process-item">
                     <div class="process-number">3</div>
                     <div class="process-content">
-                        <div class="process-title">初版楽曲制作（1週間）</div>
-                        <p class="process-text">SunoAI v4.5による高品質な楽曲制作と初期調整を行います</p>
+                        <div class="process-title">AI楽曲制作（1週間）</div>
+                        <p class="process-text">最新AI技術による高品質な楽曲制作と初期調整を行います</p>
                     </div>
                 </div>
                 
@@ -566,36 +696,70 @@
                     <div class="process-number">4</div>
                     <div class="process-content">
                         <div class="process-title">フィードバック・調整（2週間）</div>
-                        <p class="process-text">貴院のご意見を反映し、最大3回まで修正・調整を行います</p>
+                        <p class="process-text">お客様のご意見を反映し、最大3回まで修正・調整を行います</p>
                     </div>
                 </div>
                 
                 <div class="process-item">
                     <div class="process-number">5</div>
                     <div class="process-content">
-                        <div class="process-title">最終納品（1週間）</div>
-                        <p class="process-text">楽曲ファイル、歌詞、楽譜、活用ガイドラインを納品いたします</p>
+                        <div class="process-title">最終納品・活用支援（1週間）</div>
+                        <p class="process-text">楽曲ファイル、歌詞、活用ガイドライン、導入支援を提供します</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="pricing-box no-break">
-            <h2 class="pricing-title">💰 制作費用</h2>
-            <div class="pricing-amount">¥150,000</div>
-            <div class="pricing-subtitle">（税込・制作費一式）</div>
-            <ul class="pricing-features">
-                <li>オリジナル楽曲制作（3分程度）</li>
-                <li>高品質音源ファイル（WAV、MP3形式）</li>
-                <li>歌詞・楽譜データ</li>
-                <li>カラオケ版音源</li>
-                <li>最大3回までの修正対応</li>
-                <li>活用ガイドライン資料</li>
-                <li>著作権譲渡（商用利用可能）</li>
-                <li>6ヶ月間のアフターサポート</li>
-            </ul>
-            <div class="pricing-conditions">
-                <strong>納期：</strong> ご契約から約6週間　　<strong>支払い条件：</strong> 着手金50% / 納品時50%
+        <div class="case-study no-break">
+            <h4>📋 導入事例</h4>
+            <div class="case-quote">
+                「スタッフが毎朝楽しそうに歌っているのを見て、本当に作って良かったと思いました。離職率も20%減少し、患者様からも『温かい雰囲気ですね』とお褒めの言葉をいただいています。」
+            </div>
+            <p class="case-attribution">- 東京都内 歯科クリニック院長様</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">💰 料金プラン</h2>
+            <div class="pricing-container">
+                <div class="pricing-plan">
+                    <div class="plan-title">ベーシック</div>
+                    <div class="plan-price">¥120,000</div>
+                    <ul class="plan-features">
+                        <li>楽曲制作（2-3分）</li>
+                        <li>基本音源（MP3）</li>
+                        <li>歌詞データ</li>
+                        <li>2回まで修正</li>
+                        <li>基本サポート</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-plan featured">
+                    <div class="plan-title">スタンダード</div>
+                    <div class="plan-price">¥150,000</div>
+                    <ul class="plan-features">
+                        <li>楽曲制作（3分程度）</li>
+                        <li>高品質音源（WAV+MP3）</li>
+                        <li>歌詞・楽譜データ</li>
+                        <li>カラオケ版音源</li>
+                        <li>3回まで修正</li>
+                        <li>活用ガイドライン</li>
+                        <li>6ヶ月サポート</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-plan">
+                    <div class="plan-title">プレミアム</div>
+                    <div class="plan-price">¥200,000</div>
+                    <ul class="plan-features">
+                        <li>楽曲制作（3-4分）</li>
+                        <li>プロ仕様音源</li>
+                        <li>複数バージョン</li>
+                        <li>無制限修正</li>
+                        <li>導入研修付き</li>
+                        <li>1年間サポート</li>
+                        <li>効果測定支援</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -603,60 +767,40 @@
         <div class="page-break"></div>
         
         <div class="section">
-            <h2 class="section-title">🌟 追加オプション</h2>
-            <div class="options-container">
-                <div class="option-item">
-                    <div class="option-icon">🎬</div>
-                    <div class="option-title">ミュージックビデオ制作</div>
-                    <p class="option-price">+¥200,000</p>
+            <h2 class="section-title">🌟 オプションサービス</h2>
+            <div class="industry-grid">
+                <div class="industry-card">
+                    <span class="industry-icon">🎬</span>
+                    <div class="industry-title">ミュージックビデオ</div>
+                    <p class="industry-examples">+¥150,000〜<br>視覚的な訴求力向上</p>
                 </div>
-                <div class="option-item">
-                    <div class="option-icon">🎤</div>
-                    <div class="option-title">スタッフ合唱版録音</div>
-                    <p class="option-price">+¥100,000</p>
+                <div class="industry-card">
+                    <span class="industry-icon">🎤</span>
+                    <div class="industry-title">合唱版録音</div>
+                    <p class="industry-examples">+¥80,000〜<br>スタッフ参加型制作</p>
                 </div>
-                <div class="option-item">
-                    <div class="option-icon">📱</div>
-                    <div class="option-title">待合室用アレンジ版</div>
-                    <p class="option-price">+¥50,000</p>
+                <div class="industry-card">
+                    <span class="industry-icon">📱</span>
+                    <div class="industry-title">アプリ組み込み</div>
+                    <p class="industry-examples">+¥50,000〜<br>デジタル活用支援</p>
                 </div>
-            </div>
-        </div>
-
-        <div class="cta-box no-break">
-            <h2 class="cta-title">音楽で育む、永続的な絆</h2>
-            <p class="cta-text">
-                <span class="fractal-highlight" style="background: rgba(255,255,255,0.2); color: white;">一つの楽曲が生み出す無限の可能性</span>を、ぜひ貴院で体験してください
-            </p>
-        </div>
-
-        <div class="contact-box">
-            <h3 class="contact-title">📞 お問い合わせ</h3>
-            <p style="margin-bottom: 0; font-size: 10pt;">ご質問・ご相談はお気軽にどうぞ</p>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-label">メール</div>
-                    <p class="contact-value">info@music-creation.jp</p>
+                <div class="industry-card">
+                    <span class="industry-icon">🎼</span>
+                    <div class="industry-title">楽器演奏版</div>
+                    <p class="industry-examples">+¥100,000〜<br>イベント用アレンジ</p>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📞</div>
-                    <div class="contact-label">電話</div>
-                    <p class="contact-value">03-1234-5678</p>
+                <div class="industry-card">
+                    <span class="industry-icon">🎭</span>
+                    <div class="industry-title">多言語版</div>
+                    <p class="industry-examples">+¥60,000〜<br>国際対応版制作</p>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🕐</div>
-                    <div class="contact-label">受付時間</div>
-                    <p class="contact-value">平日 9:00-18:00</p>
+                <div class="industry-card">
+                    <span class="industry-icon">📊</span>
+                    <div class="industry-title">効果測定</div>
+                    <p class="industry-examples">+¥30,000〜<br>定量的効果分析</p>
                 </div>
             </div>
         </div>
 
-        <div class="footer">
-            <p>
-                この提案書は <strong>2025年6月16日</strong> に作成されました　　有効期限：2025年7月31日まで
-            </p>
-        </div>
-    </div>
-</body>
-</html>
+        <div class="section no-break">
+            <h2 class="section-title">
